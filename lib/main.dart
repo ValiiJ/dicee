@@ -1,23 +1,25 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  return runApp(MaterialApp(
-    home: Scaffold(
-      backgroundColor: const Color.fromARGB(255, 36, 36, 36),
-      appBar: AppBar(
-        title: const Text('Dicee'),
-        backgroundColor: const Color.fromARGB(255, 16, 16, 16),
+  return runApp(
+    MaterialApp(
+      home: Scaffold(
+        backgroundColor: const Color.fromARGB(255, 10, 10, 10),
+        appBar: AppBar(
+          title: const Text('Dicee'),
+          backgroundColor: const Color.fromARGB(255, 08, 08, 08),
+        ),
+        body: DicePage(),
       ),
-      body: const DicePage(),
     ),
-  ));
+  );
 }
 
 class DicePage extends StatelessWidget {
-  const DicePage({super.key});
-
   @override
   Widget build(BuildContext context) {
+    var leftDiceNumber = 1;
+
     return Center(
       child: Row(
         children: [
@@ -26,7 +28,7 @@ class DicePage extends StatelessWidget {
               onPressed: () {
                 print('left dicee got pressed');
               },
-              child: Image.asset('images/dice1.png'),
+              child: Image.asset('images/dice$leftDiceNumber.png'),
             ),
           ),
           Expanded(
