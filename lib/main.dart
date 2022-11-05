@@ -10,7 +10,7 @@ void main() {
           title: const Text('Dicee'),
           backgroundColor: const Color.fromARGB(255, 08, 08, 08),
         ),
-        body: DicePage(),
+        body: const DicePage(),
       ),
     ),
   );
